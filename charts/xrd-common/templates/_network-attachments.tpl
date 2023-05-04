@@ -15,6 +15,7 @@ spec:
   config: |-
     {
       "cniVersion": "0.3.1",
+      "name": "xrd-net-attach-def",
       "plugins": [
         {{- $intf.config | toPrettyJson | nindent 8 }}
       ]
