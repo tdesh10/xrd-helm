@@ -1,0 +1,59 @@
+apiVersion: v1
+entries:
+  xrd-common:
+  - apiVersion: v2
+    created: "2023-05-03T18:18:18.598264-07:00"
+    description: Common helpers for Cisco IOS-XR XRd platforms
+    digest: f2cd9113b05eb3a967f768523d5d5d827aff918612180eb2eacbd989b5b2ed27
+    keywords:
+    - cisco
+    - ios-xr
+    - xrd
+    name: xrd-common
+    sources:
+    - https://github.com/ios-xr/xrd-helm
+    type: library
+    urls:
+    - https://tdesh10.github.io/xrd-helm/xrd-common-1.0.1.tgz
+    version: 1.0.1
+  xrd-control-plane:
+  - apiVersion: v2
+    created: "2023-05-03T18:18:18.599329-07:00"
+    dependencies:
+    - name: xrd-common
+      repository: file://../xrd-common
+      version: 1.0.1
+    description: Cisco IOS-XR XRd Control Plane platform
+    digest: a1636ed19a79b74a610af138e98c6f7abe549231302113c99b79e10b32ec904c
+    keywords:
+    - cisco
+    - ios-xr
+    - xrd
+    name: xrd-control-plane
+    sources:
+    - https://github.com/ios-xr/xrd-helm
+    type: application
+    urls:
+    - https://tdesh10.github.io/xrd-helm/xrd-control-plane-1.0.1.tgz
+    version: 1.0.1
+  xrd-vrouter:
+  - apiVersion: v2
+    created: "2023-05-03T18:18:18.600419-07:00"
+    dependencies:
+    - name: xrd-common
+      repository: file://../xrd-common
+      version: 1.0.1
+    description: Cisco IOS-XR XRd vRouter platform
+    digest: 0c7e8220cdb3b2fe84d324da6f10c971f6bb03bb82fe68de884c85cdaf22597a
+    keywords:
+    - cisco
+    - ios-xr
+    - xrd
+    name: xrd-vrouter
+    sources:
+    - https://github.com/ios-xr/xrd-helm
+    type: application
+    urls:
+    - https://tdesh10.github.io/xrd-helm/xrd-vrouter-1.0.1.tgz
+    version: 1.0.1
+generated: "2023-05-03T18:18:18.597681-07:00"
